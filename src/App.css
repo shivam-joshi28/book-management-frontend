@@ -1,38 +1,254 @@
-.App {
+/* .app {
   text-align: center;
+  padding: 20px;
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-size: 2.5rem; 
+  color: #007bff; 
+  text-align: center; 
+  margin-top: 20px; 
+  margin-bottom: 20px; 
+  font-weight: bold; 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav {
+  background-color: #007bff; 
+  padding: 30px 0;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+nav ul li {
+  margin-right: 5px;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: blue; 
+}
+
+button {
+  padding: 10px 20px;
+  margin: 20px 10px;
+  background-color: #007bff;
   color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #0056b3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+input {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 250px;
+}
+
+h2 {
+  margin-top: 20px;
+  font-size: 2rem;
+  color: #007bff;
+}
+
+.search-form-group {
+  margin-bottom: 20px;
+}
+
+.books-list {
+  margin-top: 20px;
+}
+
+.books-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.books-list li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.books-list li:last-child {
+  border-bottom: none;
+} */
+/* General styles */
+.app {
+  text-align: center;
+  padding: 20px;
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+h1 {
+  font-size: 2.5rem; /* Increase the size */
+  color: #007bff; /* Match the color to the theme */
+  text-align: center; /* Center the heading horizontally */
+  margin-top: 20px; /* Add space above */
+  margin-bottom: 20px; /* Add space below */
+  font-weight: bold; /* Make the heading bold */
+}
+
+nav {
+  background-color: #007bff; /* Modern blue color */
+  padding: 30px 0;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+nav ul li {
+  margin-right: 5px;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: blue; /* Darker blue for hover */
+}
+
+button {
+  padding: 10px 20px;
+  margin: 20px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+input {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 250px;
+}
+
+h2 {
+  margin-top: 20px;
+  font-size: 2rem;
+  color: #007bff;
+}
+
+.search-form-group {
+  margin-bottom: 20px;
+}
+
+.books-list {
+  margin-top: 20px;
+}
+
+.books-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.books-list li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.books-list li:last-child {
+  border-bottom: none;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  /* Adjust styles for tablets and mobile devices */
+  h1 {
+    font-size: 2rem; /* Smaller heading size */
   }
-  to {
-    transform: rotate(360deg);
+
+  nav a {
+    font-size: 1rem; /* Smaller font size for navigation links */
+    padding: 8px 12px; /* Adjust padding */
+  }
+
+  button {
+    padding: 8px 16px; /* Adjust button padding */
+    margin: 15px 5px; /* Adjust margins */
+  }
+
+  input {
+    width: 100%; /* Make input fields full-width on smaller screens */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  }
+
+  .books-list li {
+    font-size: 0.9rem; /* Smaller font size for list items */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Adjust styles for small mobile devices */
+  h1 {
+    font-size: 1.5rem; /* Further reduce heading size */
+  }
+
+  nav a {
+    font-size: 0.9rem; /* Smaller font size for navigation links */
+    padding: 6px 10px; /* Adjust padding */
+  }
+
+  button {
+    padding: 6px 12px; /* Adjust button padding */
+    margin: 10px 3px; /* Adjust margins */
+  }
+
+  .books-list li {
+    font-size: 0.8rem; /* Further reduce font size for list items */
   }
 }
